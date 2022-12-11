@@ -42,13 +42,11 @@ for (let i = 0; i < rucksacks.length; i = i + 3) {
     const bag3 = [...new Set(rucksacks[i+2].split(''))];
     bag1.forEach(char => {
         if(bag2.includes(char) && bag3.includes(char)){
-            console.log(char);
             badgePriorities += char2Number(char);
             return;
         }
     });
 }
-
 
 console.log(`Part 1) The sum of the priorities is: ${sumPriorities}`);
 console.log(`Part 2) ${badgePriorities}`);
